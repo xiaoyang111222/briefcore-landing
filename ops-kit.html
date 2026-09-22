@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Indie Ops Starter Kit — BriefCore</title>
+  <meta name="description" content="BriefCore Indie Ops Starter Kit: CRM Lite, Weekly Review, proposal templates, and AI prompt pack for freelancers. $15 PDF. Not wellness." />
+  <meta name="robots" content="index,follow" />
+  <meta property="og:title" content="BriefCore Indie Ops Starter Kit — $15" />
+  <meta property="og:description" content="Practical freelance ops pack: CRM Lite, Weekly Review, proposals, AI prompts. Instant PDF download." />
+  <meta property="og:image" content="ops-kit-cover.png" />
+  <style>
+    :root {
+      --bg: #f7f8fa;
+      --ink: #12141a;
+      --muted: #5c6578;
+      --card: #ffffff;
+      --line: #e2e6ef;
+      --accent: #1a4fd6;
+      --accent-soft: #e8eefc;
+      --ok: #0f766e;
+      --warn-bg: #ffedd5;
+      --warn: #9a3412;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: "Segoe UI", system-ui, -apple-system, "PingFang SC", "Noto Sans SC", sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+      line-height: 1.6;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 880px; margin: 0 auto; padding: 40px 20px 72px; }
+    header {
+      display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between;
+      gap: 12px; margin-bottom: 36px; padding-bottom: 20px; border-bottom: 1px solid var(--line);
+    }
+    .brand { font-weight: 700; font-size: 1.25rem; letter-spacing: -0.02em; }
+    .brand span { color: var(--muted); font-weight: 500; font-size: 0.95rem; margin-left: 8px; }
+    nav { display: flex; gap: 16px; font-size: 0.9rem; color: var(--muted); flex-wrap: wrap; }
+    .hero-grid {
+      display: grid; grid-template-columns: 1fr; gap: 28px; align-items: start; margin-bottom: 36px;
+    }
+    @media (min-width: 720px) {
+      .hero-grid { grid-template-columns: 220px 1fr; }
+    }
+    .cover {
+      width: 100%; max-width: 220px; border-radius: 12px; border: 1px solid var(--line);
+      box-shadow: 0 8px 24px rgba(18,20,26,0.08);
+    }
+    .hero h1 {
+      font-size: clamp(1.55rem, 4vw, 2rem);
+      line-height: 1.25; letter-spacing: -0.03em; margin: 0 0 10px;
+    }
+    .hero .sub { color: var(--muted); margin: 0 0 16px; max-width: 38em; }
+    .price-row {
+      display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px; margin-bottom: 16px;
+    }
+    .price { font-size: 1.75rem; font-weight: 700; color: var(--accent); }
+    .price small { font-size: 0.85rem; font-weight: 600; color: var(--muted); margin-left: 4px; }
+    .btn {
+      display: inline-block; padding: 12px 20px; border-radius: 10px;
+      background: var(--accent); color: #fff !important; font-weight: 650; font-size: 0.95rem;
+      text-decoration: none !important;
+    }
+    .btn:hover { filter: brightness(1.05); text-decoration: none !important; }
+    .btn-ghost {
+      display: inline-block; padding: 11px 18px; border-radius: 10px;
+      border: 1px solid var(--line); background: var(--card); color: var(--ink) !important;
+      font-weight: 600; font-size: 0.92rem; text-decoration: none !important;
+    }
+    .btn-ghost:hover { border-color: var(--accent); color: var(--accent) !important; text-decoration: none !important; }
+    .badges { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+    .badge {
+      font-size: 0.78rem; padding: 4px 10px; border-radius: 999px;
+      background: var(--accent-soft); color: var(--accent); font-weight: 600;
+    }
+    .badge-warn {
+      background: var(--warn-bg); color: var(--warn);
+    }
+    h2 { font-size: 1.15rem; margin: 40px 0 14px; letter-spacing: -0.02em; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+    .card {
+      background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+      padding: 18px 18px 16px;
+    }
+    .card .title { font-weight: 650; font-size: 1rem; margin-bottom: 6px; }
+    .card p { margin: 0; color: var(--muted); font-size: 0.9rem; }
+    .inside {
+      background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+      padding: 8px 18px 16px;
+    }
+    .inside ol { margin: 8px 0 0; padding-left: 1.2em; color: var(--muted); font-size: 0.95rem; }
+    .inside li { margin: 8px 0; }
+    .inside li strong { color: var(--ink); }
+    .cta-box {
+      margin-top: 36px; padding: 22px 20px; border-radius: 12px; background: var(--card);
+      border: 1px solid var(--line); display: flex; flex-wrap: wrap; gap: 16px;
+      align-items: center; justify-content: space-between;
+    }
+    .cta-box p { margin: 4px 0 0; color: var(--muted); font-size: 0.9rem; max-width: 32em; }
+    .note {
+      margin-top: 16px; font-size: 0.85rem; color: var(--muted);
+      padding: 10px 12px; background: #f0f2f7; border-radius: 8px;
+    }
+    .who { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+    .who .card ul { margin: 6px 0 0; padding-left: 1.1em; color: var(--muted); font-size: 0.9rem; }
+    footer {
+      margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--line);
+      font-size: 0.8rem; color: var(--muted);
+    }
+    .fineprint { margin-top: 10px; font-size: 0.75rem; color: #7a8499; max-width: 48em; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand"><a href="index.html" style="color:inherit;text-decoration:none;">BriefCore</a><span>稿核</span></div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="ops-kit.html">Ops Kit</a>
+        <a href="index.html#packages">Services</a>
+        <a href="ops-kit-sample.pdf">Free sample</a>
+        <a href="privacy.html">Privacy</a>
+      </nav>
+    </header>
+
+    <section class="hero-grid hero">
+      <img class="cover" src="ops-kit-cover.png" width="220" height="275" alt="BriefCore Indie Ops Starter Kit cover" />
+      <div>
+        <h1>Indie Ops Starter Kit</h1>
+        <p class="sub">
+          A practical printable ops pack for freelancers and indie makers who outgrew sticky notes
+          but don’t want enterprise CRM theater. Notion-style Markdown/HTML + clean PDF desk pack.
+        </p>
+        <div class="price-row">
+          <div class="price">$15<small>USD · one-time</small></div>
+          <a class="btn" href="https://www.creem.io/payment/prod_vmtAxZUGLGCwKrn5IFFBf" rel="noopener">Buy on Creem →</a>
+          <a class="btn-ghost" href="ops-kit-sample.pdf">Download free sample (PDF)</a>
+        </div>
+        <div class="badges">
+          <span class="badge">Instant digital PDF</span>
+          <span class="badge">Freelance / indie ops</span>
+          <span class="badge badge-warn">Not wellness / mindfulness</span>
+        </div>
+      </div>
+    </section>
+
+    <h2>Why this kit</h2>
+    <div class="grid">
+      <article class="card">
+        <div class="title">Stop leaking follow-ups</div>
+        <p>Leads in DMs, proposals in random Docs, “I’ll follow up” only in your head — fix the pipe, not your talent.</p>
+      </article>
+      <article class="card">
+        <div class="title">Boring stages that work</div>
+        <p>Lead → Qualified → Proposal → Won → Active → Done. Client cards, red-flag filter, next-action discipline.</p>
+      </article>
+      <article class="card">
+        <div class="title">Ship proposals faster</div>
+        <p>Three structures (fixed, retainer, audit→build) plus AI prompt cards for research and drafts you still verify.</p>
+      </article>
+      <article class="card">
+        <div class="title">Weekly Review in 30–45 min</div>
+        <p>Pipeline hygiene, tiny scoreboard, and three outcomes so capacity stays honest.</p>
+      </article>
+    </div>
+
+    <h2>What’s inside</h2>
+    <div class="inside">
+      <ol>
+        <li><strong>CRM Lite</strong> — stages, client cards, red-flag pause checklist</li>
+        <li><strong>Intake &amp; discovery</strong> — short form, call agenda, fit scorecard</li>
+        <li><strong>Weekly Review</strong> — scoreboard + 3 weekly outcomes</li>
+        <li><strong>Proposal templates ×3</strong> — fixed-scope, retainer, audit→build</li>
+        <li><strong>Follow-up cadence</strong> — day 0 / +3 / +7 / +14 without spammy vibes</li>
+        <li><strong>AI prompt library</strong> — company snapshot, site critique, competitors, proposal outline, risk register, capacity guardrails</li>
+        <li><strong>Printable one-pagers</strong> — daily ops, call sheet, invoice nudge</li>
+      </ol>
+    </div>
+
+    <h2>Who it’s for (and not)</h2>
+    <div class="who">
+      <article class="card">
+        <div class="title">For</div>
+        <ul>
+          <li>Designers, writers, developers, marketers, consultants</li>
+          <li>Solo or tiny studio selling services</li>
+          <li>Anyone past sticky notes, before Salesforce</li>
+        </ul>
+      </article>
+      <article class="card">
+        <div class="title">Not for</div>
+        <ul>
+          <li>Enterprise sales teams</li>
+          <li>Mindfulness / meditation / wellness journals</li>
+          <li>Anyone wanting legal, tax, or accounting advice</li>
+        </ul>
+      </article>
+    </div>
+
+    <h2>Free sample vs full kit</h2>
+    <div class="grid">
+      <article class="card">
+        <div class="title">Free sample (3 pages)</div>
+        <p>15-minute setup · CRM Lite snapshot · one AI research prompt card. <a href="ops-kit-sample.pdf">Download PDF</a></p>
+      </article>
+      <article class="card">
+        <div class="title">Full kit — $15</div>
+        <p>Complete Weekly Review, all proposals, intake pack, follow-ups, capacity board, full prompt library + printable desk pack.</p>
+      </article>
+    </div>
+
+    <section class="cta-box" id="buy">
+      <div>
+        <strong>Ready to clean up ops?</strong>
+        <p>Pay once on Creem. Instant download of the full Indie Ops Starter Kit PDF.</p>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:10px;">
+        <a class="btn" href="https://www.creem.io/payment/prod_vmtAxZUGLGCwKrn5IFFBf" rel="noopener">Buy — $15 on Creem</a>
+        <a class="btn-ghost" href="ops-kit-sample.pdf">Free sample</a>
+      </div>
+    </section>
+
+    <div class="note">
+      <strong>Format:</strong> Digital PDF (+ Markdown/HTML system you can paste into Notion, Obsidian, or Docs).
+      Personal use license — don’t resell the pack. Educational operations templates only; not legal/tax advice.
+      Checkout and delivery via <strong>Creem</strong>.
+    </div>
+
+    <p class="fineprint">
+      BriefCore is a separate product line from DailyStill. This kit is freelance/indie operations content — not wellness, mindfulness, or meditation.
+    </p>
+
+    <footer>
+      © 2026 BriefCore（稿核） · <a href="index.html">Home</a> · <a href="privacy.html">Privacy</a>
+      · Not a medical / wellness brand
+    </footer>
+  </div>
+</body>
+</html>

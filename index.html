@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>BriefCore 稿核 — 英文文案 · 竞品简报 · 轻量自动化</title>
-  <meta name="description" content="BriefCore（稿核）：固定价格交付英文落地页文案、竞品调研简报、n8n/Make 单场景自动化。AI 辅助 + 人工审校。" />
+  <title>BriefCore 稿核 — Indie Ops Kit · 英文文案 · 竞品简报 · 自动化</title>
+  <meta name="description" content="BriefCore（稿核）：Indie Ops Starter Kit（$15）+ 固定价格英文落地页文案、竞品调研简报、n8n/Make 单场景自动化。" />
   <meta name="robots" content="index,follow" />
   <style>
     :root {
@@ -34,18 +34,50 @@
     }
     .brand { font-weight: 700; font-size: 1.25rem; letter-spacing: -0.02em; }
     .brand span { color: var(--muted); font-weight: 500; font-size: 0.95rem; margin-left: 8px; }
-    nav { display: flex; gap: 16px; font-size: 0.9rem; color: var(--muted); }
+    nav { display: flex; gap: 16px; font-size: 0.9rem; color: var(--muted); flex-wrap: wrap; }
     .hero h1 {
       font-size: clamp(1.6rem, 4vw, 2.1rem);
       line-height: 1.25; letter-spacing: -0.03em; margin: 0 0 12px;
     }
     .hero p { color: var(--muted); margin: 0 0 20px; max-width: 36em; }
-    .badges { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 32px; }
+    .badges { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; }
     .badge {
       font-size: 0.78rem; padding: 4px 10px; border-radius: 999px;
       background: var(--accent-soft); color: var(--accent); font-weight: 600;
     }
     h2 { font-size: 1.15rem; margin: 40px 0 14px; letter-spacing: -0.02em; }
+    .feature {
+      background: var(--card); border: 1px solid var(--line); border-radius: 14px;
+      padding: 20px; display: grid; gap: 18px; margin-bottom: 8px;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 640px) {
+      .feature { grid-template-columns: 140px 1fr; align-items: start; }
+    }
+    .feature img {
+      width: 100%; max-width: 140px; border-radius: 10px; border: 1px solid var(--line);
+    }
+    .feature .eyebrow {
+      font-size: 0.75rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase;
+      color: var(--accent); margin: 0 0 6px;
+    }
+    .feature h2 { margin: 0 0 8px; font-size: 1.25rem; }
+    .feature .lead { margin: 0 0 12px; color: var(--muted); font-size: 0.95rem; }
+    .feature ul { margin: 0 0 14px; padding-left: 1.15em; color: var(--muted); font-size: 0.9rem; }
+    .feature .actions { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+    .price-tag { font-size: 1.4rem; font-weight: 700; color: var(--accent); margin-right: 4px; }
+    .btn {
+      display: inline-block; padding: 10px 16px; border-radius: 10px;
+      background: var(--accent); color: #fff !important; font-weight: 650; font-size: 0.9rem;
+      text-decoration: none !important;
+    }
+    .btn:hover { filter: brightness(1.05); text-decoration: none !important; }
+    .btn-ghost {
+      display: inline-block; padding: 9px 14px; border-radius: 10px;
+      border: 1px solid var(--line); background: #fff; color: var(--ink) !important;
+      font-weight: 600; font-size: 0.88rem; text-decoration: none !important;
+    }
+    .btn-ghost:hover { border-color: var(--accent); color: var(--accent) !important; text-decoration: none !important; }
     .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
     .card {
       background: var(--card); border: 1px solid var(--line); border-radius: 12px;
@@ -86,27 +118,51 @@
     <header>
       <div class="brand">BriefCore<span>稿核</span></div>
       <nav>
+        <a href="ops-kit.html">Ops Kit</a>
         <a href="#packages">套餐</a>
         <a href="#cases">案例</a>
-        <a href="sample-case-en-lp.html">样例详页</a>
+        <a href="ops-kit-sample.pdf">免费样章</a>
         <a href="privacy.html">隐私</a>
       </nav>
     </header>
 
     <section class="hero">
-      <h1>固定范围、固定价格的<br />文案 · 调研 · 自动化交付</h1>
+      <h1>Indie Ops 工具包 + 固定范围交付</h1>
       <p>
-        面向独立开发者与小型团队：英文落地页文案、竞品调研简报、n8n/Make 单场景自动化。
-        说清包含与不含，减少项目制扯皮。
+        BriefCore 面向独立开发者与小型团队：先用 <strong>Indie Ops Starter Kit</strong> 理清客户管道与周复盘，
+        再按需下单英文落地页文案、竞品简报或 n8n/Make 单场景自动化。
       </p>
       <div class="badges">
         <span class="badge">合法商业服务</span>
-        <span class="badge">AI 辅助 + 人工审校</span>
-        <span class="badge">不提供医疗/投资建议</span>
+        <span class="badge">数字产品 $15</span>
+        <span class="badge">非 wellness / 非医疗理财</span>
       </div>
     </section>
 
-    <h2 id="packages">三个固定套餐</h2>
+    <section class="feature" id="ops-kit" aria-labelledby="ops-kit-title">
+      <img src="ops-kit-cover.png" width="140" height="175" alt="Indie Ops Starter Kit cover" />
+      <div>
+        <p class="eyebrow">Digital product · Instant PDF</p>
+        <h2 id="ops-kit-title">Indie Ops Starter Kit</h2>
+        <p class="lead">
+          CRM Lite、Weekly Review、三套提案结构、跟进节奏与 AI Prompt 卡 — 面向自由职业 / 独立运营者的可打印 ops 包。
+          <strong>不是</strong>正念或 wellness 日记。
+        </p>
+        <ul>
+          <li>Lead → Done 管道 + 客户卡 + 红旗过滤</li>
+          <li>30–45 分钟周复盘 + 产能档位</li>
+          <li>固定价 / 月费 / 审计→交付 三类提案模板</li>
+        </ul>
+        <div class="actions">
+          <span class="price-tag">$15</span>
+          <a class="btn" href="https://www.creem.io/payment/prod_vmtAxZUGLGCwKrn5IFFBf" rel="noopener">Creem 购买</a>
+          <a class="btn-ghost" href="ops-kit.html">产品详情</a>
+          <a class="btn-ghost" href="ops-kit-sample.pdf">免费样章 PDF</a>
+        </div>
+      </div>
+    </section>
+
+    <h2 id="packages">三个固定套餐（定制交付）</h2>
     <div class="grid">
       <article class="card">
         <div class="price">¥99</div>
@@ -172,19 +228,21 @@
         临时邮箱占位：<code>hello@briefcore.local</code>（请勿发送证件或密码）
       </p>
       <div class="note">
-        <strong>正式交易请优先使用：</strong>闲鱼担保交易、猪八戒平台下单；独立站支付后续接入
-        <strong>Creem</strong>（上线后替换本页指引）。店铺名建议：<strong>稿核 / BriefCore</strong>。
+        <strong>数字产品：</strong><a href="ops-kit.html">Indie Ops Starter Kit</a> 经
+        <a href="https://www.creem.io/payment/prod_vmtAxZUGLGCwKrn5IFFBf" rel="noopener">Creem</a> 支付并即时下载。
+        <strong>定制交付：</strong>优先闲鱼担保、猪八戒平台；店铺名建议：<strong>稿核 / BriefCore</strong>。
       </div>
     </section>
 
     <p class="fineprint">
       细字：交付过程中可能使用 AI 辅助生成初稿与结构建议，终稿经 BriefCore 人工审校。
-      不提供医疗诊断建议、投资理财建议或法律意见；不代发或代管用户个人社交账号内容。
+      Ops Kit 为运营模板教育用途，非法律/税务建议。不提供医疗诊断建议、投资理财建议；不代发或代管用户个人社交账号内容。
+      BriefCore 与 DailyStill（正念线）为不同产品线。
     </p>
 
     <footer>
-      © 2026 BriefCore（稿核） · <a href="privacy.html">Privacy</a>
-      · 作品集静态页 · 非医疗 / 非理财品牌
+      © 2026 BriefCore（稿核） · <a href="ops-kit.html">Ops Kit</a> · <a href="privacy.html">Privacy</a>
+      · 作品集静态页 · 非医疗 / 非理财 / 非 wellness 品牌
     </footer>
   </div>
 </body>
